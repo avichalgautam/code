@@ -1,0 +1,174 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User/Member.master" AutoEventWireup="true" CodeFile="View.aspx.cs" Inherits="View" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .style2
+        {
+            width: 100%;
+        }
+        .style4
+        {
+        }
+        .style5
+        {
+        }
+        .style6
+        {
+    }
+        .style7
+        {
+            width: 100px;
+        }
+    .style8
+    {
+        color: #FF6600;
+    }
+    .style9
+    {
+        font-size: large;
+    }
+    .style10
+    {
+        width: 256px;
+    }
+    </style>
+    <script type="text/javascript">
+        function img(i) {
+
+            var imgg = document.getElementById('<%=Image3.ClientID%>');
+            imgg.src = i.src;
+        
+        }
+    
+    </script>
+
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <table class="tbl">
+
+     <tr>
+            <td class="tblhead" colspan="2">
+               
+
+                Item Detail</td>
+        </tr>
+        <tr>
+            <td class="style10">
+                <asp:Image ID="Image3" runat="server" Height="282px" Width="285px" 
+                    CssClass="vimg" />
+            </td>
+            <td valign="top" 
+                
+                style="border-left-style: solid; border-left-width: thin; border-left-color: #C0C0C0" 
+                bgcolor="#D8F5D8">
+                <span class="style8"><span class="style9">&nbsp;&nbsp; Item Name : </span>
+                </span><span class="style9">
+                <asp:Label ID="lblname" runat="server" CssClass="style8"></asp:Label>
+                </span>
+                <br />
+                <br />
+                <span class="style9"><span class="style8">&nbsp;&nbsp;
+                Item Price :
+                </span>
+                <asp:Label ID="lblprice" runat="server" CssClass="style8"></asp:Label>
+                <br class="style8" />
+                <br class="style8" />
+                <span class="style8">&nbsp;&nbsp;
+                Item Quantity :
+                </span>
+                <asp:Label ID="lblqnt" runat="server" CssClass="style8"></asp:Label>
+                </span>
+                <br />
+                <br />
+                <span class="style9">
+                <span class="style8">&nbsp;&nbsp; Item Size :
+                </span>
+                <asp:Label ID="lblqnt0" runat="server" CssClass="style8"></asp:Label>
+                </span>
+                <br />
+                <br />
+                <br />
+                &nbsp;&nbsp;
+                Detail : 
+                <asp:Label ID="lbldetil" runat="server"></asp:Label>
+                <br />
+                <br />
+                <br />
+                <br />
+                <span class="style9">
+                <span class="style8">
+                <br />
+&nbsp; Quantity :
+                <asp:TextBox ID="TextBox3" runat="server" ValidationGroup="qnt"></asp:TextBox>
+&nbsp; </span>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                    ControlToValidate="TextBox3" ErrorMessage="Enter Quantity" Font-Bold="True" 
+                    ForeColor="Red" ValidationGroup="qnt"></asp:RequiredFieldValidator>
+                </span><br />
+                <br />
+                <br />
+&nbsp;&nbsp;<span class="style9"><span class="style8"><asp:Label ID="lbltot" runat="server" 
+                    CssClass="style8" Visible="False"></asp:Label>
+                </span>
+                </span>
+                <br />
+                <br />
+                &nbsp;&nbsp;
+                <asp:Button ID="Button3" runat="server" CssClass="btn" onclick="Button3_Click" 
+                    Text="Buy Now" Width="120px" ValidationGroup="qnt" />
+            </td>
+        </tr>
+        <tr>
+            <td class="style4" colspan="2">
+                <asp:TextBox ID="TextBox1" runat="server" Visible="False"></asp:TextBox>
+                <asp:TextBox ID="TextBox2" runat="server" Visible="False"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="style5" colspan="2">
+                <asp:DataList ID="DataList1" runat="server" RepeatColumns="7" 
+                    RepeatDirection="Horizontal" onitemcommand="DataList1_ItemCommand" 
+                    DataSourceID="SqlDataSource1">
+                    <ItemTemplate>
+                        <table class="style7">
+                            <tr>
+                                <td bgcolor="#009933" style="text-align: center">
+                                    <asp:Label ID="lblinamee" Text='<%#Eval("iname")%>' runat="server" ForeColor="White"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center">
+                                    <asp:Image ID="imgitem" runat="server" CssClass="vimg" Height="80px" ImageUrl='<%#Eval("image") %>'
+                                         Width="70px" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center">
+                                    <asp:Button ID="Button4" runat="server" CssClass="btn" Font-Size="Small" 
+                                        Height="25px"  CommandArgument='<%#Eval("iname") %>' 
+                                        Text="Buy" Width="80px" />
+                                </td>
+                            </tr>
+                        </table>
+                    </ItemTemplate>
+                </asp:DataList>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                    ConnectionString="<%$ ConnectionStrings:ConnectionString %>" 
+                    SelectCommand="SELECT [Iname], [Image] FROM [item] WHERE ([Cname] = @Cname)">
+                    <SelectParameters>
+                        <asp:ControlParameter ControlID="TextBox2" Name="Cname" PropertyName="Text" 
+                            Type="String" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                <asp:TextBox ID="TextBox4" runat="server" Visible="False"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td class="style10">
+                &nbsp;</td>
+            <td>
+                &nbsp;</td>
+        </tr>
+    </table>
+</asp:Content>
+

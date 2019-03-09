@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="User.master.cs" Inherits="User" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    
+   
+    <link href="meera.css" rel="stylesheet" type="text/css" />
+     <link href="meera.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="engine1/style.css" media="screen" />
+	<style type="text/css">a#vlb{display:none}</style>
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+    <style type="text/css">
+        .style2
+        {
+            width: 100px;
+        }
+        .style3
+        {
+            width: 101px;
+        }
+        .style5
+        {
+            color: Green;
+            text-align: center;
+            width: 101px;
+        }
+        .style6
+        {
+            height: 19px;
+        }
+        </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+<div id="top">
+    <div id="logo">
+        <div id="login">
+        <table class="tbl">
+            <tr>
+                <td colspan="2" class="tblhead">
+                    Login Details</td>
+            </tr>
+            <tr>
+                <td class="style3">
+                    &nbsp;</td>
+                <td>
+                    <asp:Label ID="lblerror" runat="server"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="style5">
+                    ID :</td>
+                <td>
+                    <asp:TextBox ID="txtuname" runat="server" CssClass="txt" 
+                       ></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="style5">
+                    Password :</td>
+                <td>
+                    <asp:TextBox ID="txtupass" runat="server" CssClass="txt" TextMode="Password"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="style5">
+                    As:</td>
+                <td>
+                    <asp:RadioButtonList ID="RadioButtonList1" runat="server" Height="62px" 
+                         Width="103px">
+                        <asp:ListItem>Doctor</asp:ListItem>
+                        <asp:ListItem>Patient</asp:ListItem>
+                        <asp:ListItem>Receptionist</asp:ListItem>
+                    </asp:RadioButtonList>
+                </td>
+            </tr>
+            <tr>
+                <td class="style3">
+                    <asp:Image ID="Image3" runat="server" Height="36px" 
+                        ImageUrl="~/images/imagesds.jpg" Width="73px" />
+                </td>
+                <td align="left">
+                    <table class="style2">
+                        <tr>
+                            <td>
+                    <asp:Button ID="Button1" runat="server" CssClass="btn" Text="Login" 
+                                    onclick="Button1_Click" />
+                            </td>
+                            <td>
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    &nbsp;</td>
+                <td align="left">
+                    <asp:HyperLink ID="HyperLink1" runat="server" style="color: #006600" 
+                        NavigateUrl="Dreg.aspx">New User ??</asp:HyperLink>
+                </td>
+            </tr>
+            <tr>
+                <td class="style6">
+                    </td>
+                <td align="left" class="style6">
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/FPassword.aspx" 
+                        style="color: #006600">Forgot Password !!</asp:HyperLink>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </div>
+        </div>
+ 
+
+    </div>
+    <div id="second">
+    </div>
+
+    <div id="main">
+    <div id="cate">
+        </div><div id="itemm">
+        <div id="menu">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Default2.aspx" class="mnu1" >HOME 
+                </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<a href="login.aspx" class="mnu1" >ADMIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <a href="Contact us.aspx" class="mnu1">Contact Us</a>
+                <div id="slogn">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+                    <br />
+                    <br />
+	  <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+      
+      
+      
+            <p>
+                &nbsp;</p>
+      
+      
+      
+            </asp:ContentPlaceHolder>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</div>
+            </div>
+        </div>
+    <marquee>Government NGO's,Rehabitation center at Guru Bhawan 3pm to 4 pm </marquee></div>
+
+      
+    </form>
+</body>
+</html>

@@ -1,0 +1,5 @@
+D:\Projects\Slider_from_folder\Slider_from_folder\bin\Slider_from_folder.dll
+D:\Projects\Slider_from_folder\Slider_from_folder\bin\Slider_from_folder.pdb
+D:\Projects\Slider_from_folder\Slider_from_folder\obj\Debug\Slider_from_folder.dll
+D:\Projects\Slider_from_folder\Slider_from_folder\obj\Debug\Slider_from_folder.pdb
+D:\Projects\Slider_from_folder\Slider_from_folder\obj\Debug\Slider_from_folder.csprojResolveAssemblyReference.cache
